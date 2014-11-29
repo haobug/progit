@@ -1,9 +1,13 @@
-# Pro Git, 1st Edition
+# Pro Git 第一版
 
-This is the source for the 1st edition of the Pro Git book. The second edition has since been released and is what will be maintained and published going forward. Please suggest any changes to that version instead. 
+这是《Pro Git》书的第一版的源代码。第二版已经发布了，并会持续地维护和演进。有任何的建议请提到第二版去。
 
-You can find the new edition at:
+你可以在这找到新版本：
 
 https://github.com/progit/progit2
 
-If you're looking for the original README content, it can be found in the [README.original.md](README.original.md) file.
+中文版在这：
+
+https://github.com/progit/progit2-zh
+
+如果你需要找原生的 README 内容，它在这 [README.original.md](README.original.md)
