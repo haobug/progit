@@ -1,70 +1,67 @@
-[![Build Status](https://secure.travis-ci.org/progit/progit.png?branch=master)](https://travis-ci.org/progit/progit)
+[![Build Status](https://secure.travis-ci.org/haobug/progit.png?branch=master)](https://travis-ci.org/haobug/progit)
 
 # Pro Git Book Contents
 
-This is the source code for the Pro Git book contents.  It is licensed under
-the Creative Commons Attribution-Non Commercial-Share Alike 3.0 license.  I
-hope you enjoy it, I hope it helps you learn Git, and I hope you'll support
-Apress and me by purchasing a print copy of the book at Amazon:
+这是《Pro Git》书的源代码。在共同创作 署名-相同方式共享 3.0（CC-NC-SA 3.0）
+协议下发布。愿你喜欢，希望帮助你学习 Git，或者你可以在亚马逊网站订购 Apress
+的纸质版本：
 
 http://tinyurl.com/amazonprogit
 
-It is also available online at:
+当然你也可以在这下载到电子版本：
 
 http://git-scm.com/book/
 
-and fully translated in 10 languages.
+已经完整翻译成 10 种语言。
 
-# Making Ebooks
+# 生成电子书
 
-On Fedora (16 and later) you can run something like this::
+在 Fedora (16 或者更新的版) 你可以运行这样的命令：
 
     $ yum install ruby calibre rubygems ruby-devel rubygem-ruby-debug rubygem-rdiscount
     $ makeebooks en  # will produce a mobi
 
-On MacOS you can do like this:
+在 MacOS 上你可以：
 	
-1. INSTALL ruby and rubygems
+1. 安装 ruby 和 rubygems
 2. `$ gem install rdiscount`
-3. DOWNLOAD Calibre for MacOS and install command line tools. You'll need some dependencies to generate a PDF:
+3. 下载并安装 Calibre for MacOS. 如果想生成 pdf 你还需要下面的依赖：
     * pandoc: http://johnmacfarlane.net/pandoc/installing.html
     * xelatex: http://tug.org/mactex/
-4. `$ makeebooks zh` #will produce a mobi
+4. `$ makeebooks zh` #会生成 .mobi 格式电子书
 
-On Windows you can do like this:
+在 Windows 上你可以这样：
 	
-1. Install ruby and related tool from http://rubyinstaller.org/downloads/
+1. 安装 ruby 和相关工具 http://rubyinstaller.org/downloads/
     * RubyInstaller (ruby & gem)
     * Development Kit (to build rdiscount gem)
-2. Open `cmd` and `$ gem install rdiscount`
-3. Install Calibre for Windows from http://calibre-ebook.com/download
-4. `$ SET ebook_convert_path=c:\Program Files\Calibre2\ebook-convert.exe`. Modify to suit with your Calibre installed path.
-5. Make ebooks:
-    * `$ ruby makeebooks vi` #will produce a mobi
-    * `$ SET FORMAT=epub` then `$ ruby makeebooks vi` #will produce an epub
+2. 打开 `cmd` 然后 `$ gem install rdiscount`
+3. 安装 Calibre for Windows http://calibre-ebook.com/download
+4. `$ SET ebook_convert_path=c:\Program Files\Calibre2\ebook-convert.exe`. 按照你的 Calibre 安装路径修改。
+5. 生成电子书:
+    * `$ ruby makeebooks vi` #会生成 .mobi 格式电子书
+    * `$ SET FORMAT=epub` 然后 `$ ruby makeebooks vi` #会生成 .epub 格式电子书
 
-## Notes on pandoc
+## pandoc 注意点
 
-Please use Pandoc version 1.11.1 or later as older versions (confirmed on 1.9.1.1) has a [bug](https://github.com/jgm/pandoc/issues/964) which hides a word after tilde `~`.  You can do `pandoc -v` to see which version you have installed.
+请尽量使用 Pandoc 的 1.11.1 或者更新的版本；因为旧版本（比如 1.9.1.1上）有一个 [bug](https://github.com/jgm/pandoc/issues/964) 会隐藏波浪号`~`后面一个单词。你可以用 `pandoc -v` 检查你的安装的是哪个版本。
 
-# Errata
+# 勘误
 
-If you see anything that is technically wrong or otherwise in need of
-correction, please [open an issue](https://github.com/progit/progit/issues/new) and one of the maintainers will take a look.
+如果你发现了任何技术上的错误，或者需要更正的，请直接[提交一个 issue](https://github.com/progit/progit/issues/new) 维护人员都会处理的。
 
 
-# Translation
+# 翻译
 
-If you wish to translate the book, your work will be put up on the 
-git-scm.com site.  Please put your translation into the appropriate
-subdirectory of this project, using the 
-[ISO 639](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code 
-and send a pull request.
+如果你有兴趣翻译这本书，你的成果会被放到 git-scm.com 网站上。请把你的
+翻译放在适当的子目录中，使用
+[ISO 639](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 语言代码
+命名，并且发起一个 pull request.
 
-# Sending a pull request
+# 发起一个 pull request
 
-* Be careful to use UTF-8 encoding in your files.
-* Do not mix changes to the original English with translations in a single pull request.
-* If your pull request changes a translation, prefix your pull request and commits' messages with the ISO 639 code, e.g. `[de] Update chapter 2`. Please only push files where there is already some translation done.
-* Make sure the translation changes can be automatically merged. The maintainers can not make the merge manually if there are some conflicts.
-* Make as sure as possible that the changes work correctly for publishing to PDF, ebooks and the git-scm.com website.
+* 你的文件内容请使用 UTF-8 编码。
+* 不要把对原始英文的改动和翻译混在一起提交。
+* 当你改动了一个翻译时，请在你的 pull request 以及你的 commit 消息前面添加 ISO 639 语言代码，比如 `[de] Update chapter 2`这样。请只 push 已经会存在的文件。
+* 确保你的改动是可以自动 merged 的。维护人员不能做手工的 merge 工作。
+* 确保发动能正确处理生成 PDF，电子书，或者 git-scm.com 网站。
