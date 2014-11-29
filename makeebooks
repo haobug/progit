@@ -53,7 +53,7 @@ ARGV.each do |lang|
 
     figure_title = 'Figure'
     book_title = 'Pro Git - professional version control'
-    authors = 'Scott Chacon'
+    authors = 'Scott Chacon and Ben Straub'
     comments = 'licensed under the Creative Commons Attribution-Non Commercial-Share Alike 3.0 license'
     if lang == 'ko'
       figure_title = '그림'
@@ -71,6 +71,9 @@ ARGV.each do |lang|
       comments = 'distribuito sotto licenza Creative Commons Attribution-Non Commercial-Share Alike 3.0'
     elsif lang == 'zh'
       figure_title = '图'
+      book_title = 'Pro Git - 专业版本控制'
+      authors = 'Scott Chacon 和 Ben Straub'
+      comments = '共同创作 署名-相同方式共享 3.0（CC-NC-SA 3.0）协议下发布'
     elsif lang == 'zh-tw'
       figure_title = '圖'
     elsif lang == 'pt-br'
