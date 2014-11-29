@@ -5,5 +5,4 @@ script: rake ci:parallel_check
 notifications:
   email:
     recipients:
-      - jn.avila@free.fr
-
+      - qingxianhao@gmail.com
